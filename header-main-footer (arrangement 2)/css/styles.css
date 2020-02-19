@@ -1,0 +1,36 @@
+/* §    the whole document */
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      /* align-items: stretch; */
+  }
+  
+  /* §    header, footer, main */
+  header, footer {
+      flex-grow: 0;
+      min-height: 15vh;
+  }
+  header {
+      background-color: red;
+  }
+  footer {
+      background-color: yellow;
+  }
+  main {
+      flex-grow: 1;
+      background-color: blue;
+      min-height: 70vh; /* header min-height + footer min-height */
+  }
+  
+  
+  /* §    children of header */
+  /* §    children on main */
+  /* §    children of footer */
+  
