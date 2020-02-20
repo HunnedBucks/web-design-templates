@@ -3,34 +3,40 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
   
-  body {
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
-      /* align-items: stretch; */
-  }
-  
-  /* §    header, footer, main */
-  header, footer {
-      flex-grow: 0;
-      min-height: 15vh;
-  }
-  header {
-      background-color: red;
-  }
-  footer {
-      background-color: yellow;
-  }
-  main {
-      flex-grow: 1;
-      background-color: blue;
-      min-height: 70vh; /* header min-height + footer min-height */
-  }
-  
-  
-  /* §    children of header */
-  /* §    children on main */
-  /* §    children of footer */
+/* §    header, footer, main */
+header, main, footer {
+    position: relative;
+    padding: 5px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header {
+    /* background-color: red; */
+    height: 100px;
+}
+main {
+    flex-grow: 1;
+    /* background-color: blue; */
+}
+footer {
+    /* background-color: yellow; */
+    min-height: 150px; /* if the child element has 'max-width=100% set, then the footer will expand vertically if the screen width is to little for the content to fit" */
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* §    children of header */
+/* §    children on main */
+/* §    children of footer */
   
